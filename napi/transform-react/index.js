@@ -772,8 +772,16 @@ if (!nativeBinding) {
   throw new Error(`Failed to load native binding`)
 }
 
-const { Severity, transform, transformSync } = nativeBinding
+const { Severity, ParseResult, ExportExportNameKind, ExportImportNameKind, ExportLocalNameKind, ImportNameKind, parse, parseSync, rawTransferSupported, transform, transformSync } = nativeBinding
 export { Severity }
+export { ParseResult }
+export { ExportExportNameKind }
+export { ExportImportNameKind }
+export { ExportLocalNameKind }
+export { ImportNameKind }
+export { parse }
+export { parseSync }
+export { rawTransferSupported }
 export { transform }
 export { transformSync }
 export const __napiBindingTarget = __napiLoadedBindingTarget

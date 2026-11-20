@@ -15,6 +15,9 @@ static ALLOC: mimalloc_safe::MiMalloc = mimalloc_safe::MiMalloc;
 
 mod options;
 
+// links the parser binding so its exports ship in this one binary
+extern crate oxc_parser_napi;
+
 use std::path::Path;
 
 use napi::{Task, bindgen_prelude::AsyncTask};
